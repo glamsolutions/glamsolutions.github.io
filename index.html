@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Biomass Monitoring</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: Verdana, sans-serif; margin-top: 16px}
+.w3-bar,h1,button {font-family: 'Lucida Sans', sans-serif}
+.fa-cog, .fa-info-circle, .fa-gears, .fa-map-marker, .fa-lightbulb-o, .fa-exclamation-triangle, .fa-user {font-size:200px}
+</style>
+</head>
+<body>
+
+<!-- This template was taken from w3 schools and adapted to suit our project, see footer for reference link -->
+
+<!-- Taken from and adapted from https://www.w3schools.com/css/css_navbar.asp and https://www.w3schools.com/css/css_dropdowns.asp-->
+<!-- NavBar here -->
+<div class="navbar">
+    <div>
+        <ul>
+            <li><a href=#header>Home</a></li>
+            <li><a href=#intro>Introduction</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Project Process</a>
+                    <div class="dropdown-content">
+                        <a href=#dash>ArcGIS Dashboards</a>
+                        <a href=#story>ArcGIS StoryMaps</a>
+                        <a href=#app>ArcGIS Web App Builder</a>
+                        <a href=#exp>ArcGIS Experience Builder</a>
+                        <a href=#arcade>Arcade Functionality</a>
+                        <a href=#vert>VertiGIS Studio Web</a>
+                    </div>
+            <li><a href=#conclusion>Conclusion</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Header starts here ------------------------------------>
+<header id="header" class="w3-container headerpic w3-center" style="padding:90px 16px">
+    <h1 class="w3-margin headerwords w3-jumbo">Monitoring Biomass in Lake Simcoe</h1>
+    <p class="w3-xlarge headerwords">A web based GIS solution for residents to monitor general lake health</p>
+</header>
+
+<!-- Introduction Section Starts Here --------------------------------->
+<div id="intro" class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+        <div class="w3-twothird">
+            <h1>Introduction</h1> 
+            <h5 class="w3-padding-32">This website will take you through the development and learning process undertaken by the GLAM Solutions team for creating a web based solution for monitoring the health of Lake Simcoe using biomass as an indicator.</h5>
+            <h1>The Team</h1>
+            <h5>Ashley Ford</h5>
+            <p class="w3-text-grey">Web GIS Specialist</p>
+            <h5>Lindsay Aldous</h5>
+            <p class="w3-text-grey">GIS Analyst</p>
+            <h5>Mark VanDam</h5>
+            <p class="w3-text-grey">GIS Developer / Database Design</p>
+            <h5>Gowsigan Sritharan</h5>
+            <p class="w3-text-grey">GIS Developer</p>
+            <h1>Problem Statement</h1>
+            <h5>Ideal</h5>
+            <p class="w3-text-grey">Residents surrounding Lake Simcoe are concerned about the general health of the lake. Our team will investigate changes in levels of biomass in Lake Simcoe for 2008 and 2013 to gauge the health of the lake.</p>
+            <h5>Reality</h5>
+            <p class="w3-text-grey">As far as we're aware, there's currently no web-based system in place that displays biomass data over time, so interested parties are lacking a consistent, shared source of information.</p>
+            <h5>Consequences</h5>
+            <p class="w3-text-grey">Lack of information of general lake health indicated by biomass does not provide opportunities to identify areas of concern or promote conservation efforts.</p>
+            <h5>Proposal</h5>
+            <p class="w3-text-grey">Implement a map-centric web app that displays biomass data for Lake Simcoe in an accessible manner.</p>
+            <h5>Technology Used</h5>
+            <p class="w3-text-grey">ArcGIS Technology (ArcGIS Pro, ArcGIS Dashboards, ArcGIS Online) and VertiGIS Studio</p>
+        </div>
+        <!-- Picture goes here ---->
+        <div class="w3-third w3-center">
+            <i class="fa fa-info-circle w3-padding-64 w3-text-blue"></i>
+            <p>  </p>
+            <i class="fa fa-user w3-padding-64 w3-text-blue"></i>
+            <p>  </p>
+            <i class="fa fa-exclamation-triangle w3-padding-64 w3-text-blue"></i>
+        </div>
+    </div>
+</div>
+
+<!-- Visual Break-up Grid ------------------------------------------------------------------------->
+<div class="w3-container w3-blue w3-center w3-opacity w3-padding-16">
+    <h1>Project Process / Software Used</h1> 
+</div>
+
+<!-- ArcGIS Dashboard Grid Starts here ------------------------------------------------------------>
+<div id="dash" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="content2">
+        <div class="w3-twothird w3-padding-32 extrapadr">
+        <!-- Picture goes here -->
+        <img src="images/DashboardFinalMostly_Resized.PNG" alt="ArcGIS Dashboard Example">
+        <h4>Dashboard Development</h4>
+        <p class="w3-text-grey">After the Lake Simcoe data was uploaded into ArcGIS Online the developer can create a web map with the data, where edits were made to display appropriate symbology and layer names.</p>
+        <p class="w3-text-grey">Then a new Dashboard can be made, where the starting point is a blank page. All the available widgets can be found to the left of the development window</p>
+        <p class="w3-text-grey">Once all the configuration settings are set, the user can save and preview the product to see how it looks within their screen resolution.</p>
+        <a href="https://fleming.maps.arcgis.com/apps/dashboards/48c679f2129347fcb9a1b99eb4f25e35" target="_blank" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top">Test A</a>
+        <a href="https://fleming.maps.arcgis.com/apps/dashboards/85cf602aa8d346e7b8cda1640b2d35ae" target="_blank" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top">Test B</a>
+        </div>
+            <div class="w3-third">
+                <h1>ArcGIS Dashboards</h1>
+                <h5 class="w3-padding-16">Our team started this learning process with the use of ArcGIS Dashboards. It's a useful tool for generating a simple one page application that contains spatial information and allows for the inclusion of charts and numeric reporting.</h5>
+                <h4>Pros</h4>
+                <p class="w3-text-grey">Dashboards are a straightforward tool that does not require a lot of time to build a great application. The elements automatically adjust according to screen resolution.</p>
+                <h4>Cons</h4>
+                <p class="w3-text-grey">It does not have any offline capabilities and does not support any additional spatial analysis outside of header filters. It allows for a lot of user interactivity, but the UX is not always intuitive.</p>
+            </div>
+    </div>
+</div>
+
+<!-- StoryMaps Grid ----------------------------------->
+<div  id="story" class="w3-row-padding w3-padding-64 w3-container">
+    <div class="content2">
+        <div class="w3-third extrapadr">
+            <h1>ArcGIS StoryMaps</h1>
+            <h5 class="w3-padding-32">One of the ideas for our project was to include StoryMaps to act as a container for the final solution. This application allows users to share maps in the context of narrative text and other multimedia content. StoryMaps was used here to showcase the Web AppBuilder solution and provide context.</h5>
+            <h4>Pros</h4>
+            <p class="w3-text-grey">Great tool to incorporate maps, spatial data and media content together to display a narrative. It requires zero-coding skills and is simple to use for beginners</p>
+            <h4>Cons</h4>
+            <p class="w3-text-grey">Many more design features are needed as currently only a few options are available. There are not enough formatting features and options when it comes to text and media elements (i.e., resizing, moving paragraphs/headers to different sections around the StoryMaps, etc.)</p>
+        </div>
+        <!-- Picture goes here ---->
+        <div class="w3-twothird">
+            <img src="images/storymap.png" alt="ArcGIS StoryMap Example">
+            <h4>StoryMap Development</h4>
+            <p class="w3-text-grey">Once the required application has been completed, the developer can display the web solution along with providing context and other media to tell a story. </p>
+            <p class="w3-text-grey">This is done by moving into the StoryMaps application and begins by importing the web solution (through the embed feature) and setting themes, headers, context and media through the text and image features. </p>
+            <p class="w3-text-grey">Once customization of the solution is completed, the user can review and make any necessary edits before publishing. </p>
+            <a href="https://storymaps.arcgis.com/stories/fb53032cc8ce4adda6826acc19e60f3b" target="_blank" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top">Go To Solution</a>
+        </div>
+    </div>
+</div>
+
+<!-- Webapp Builder Grid ----------------------------------->
+<div id="app" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="content2">
+        <!-- Picture goes here -->
+        <div class="w3-twothird extrapadl">
+            <img src="images/webapp.png" alt="ArcGIS StoryMap Example">
+            <h4>App Builder Development</h4>
+            <p class="w3-text-grey">You begin by entering configure your web map preferably in ArcGIS Pro by adding all the necessary layers and data, customizing symbology and labelling and other map elements.</p>
+            <p class="w3-text-grey">Once the web map in Pro is completed, the web map will be uploaded to ArcGIS Online through the use of Portal (in ArcGIS Pro).</p>
+            <p class="w3-text-grey">Then you can customize web map (in map viewer) if necessary and once completed, log into ArcGIS Web App Builder and import web map to the platform.</p>
+            <p class="w3-text-grey">Then in Web AppBuilder, configure the widgets, layout, data, web map and more to your liking, then review and preview application before launching.</p>
+            <a href="https://fleming.maps.arcgis.com/apps/webappviewer/index.html?id=bf9ee785f7dc45009605b08835565dd9" target="_blank" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top">Go To Solution</a>
+        </div>
+        <!-- Text starts here -->
+        <div class="w3-third">
+            <h1>ArcGIS WebApp Builder</h1>
+            <h5 class="w3-padding-32">Web AppBuilder is an exceptional way to visualize and work with data and allows user to configure map elements, widgets, GIS functionality, provide context and more. This platform allows configuration with tools already set so any user can customize their own workflows, visualize data, perform spatial analysis and more. This solution can easily display biomass data and users can easily compare between differing datasets. </h5>
+            <h4>Pros</h4>
+            <p class="w3-text-grey">It comes with a variety of widgets to provide advanced functionality and comes with great capabilities. There are various ways to provide context through infographics, graphs, texts and other media. It's also easy to use, no coding skills required and is flexible as it can be integrated with other platforms (i.e., StoryMaps and Experience Builder).</p>
+            <h4>Cons</h4>
+            <p class="w3-text-grey">Many more design features are needed as currently only a few options are available. There are not enough formatting features and options when it comes to text and media elements (i.e., resizing, moving paragraphs/headers to different sections around the StoryMaps, etc.)</p>
+        </div>
+    </div>
+</div>
+
+<!-- Experience Builder Grid ----------------------------------->
+<div id="exp" class="w3-row-padding w3-padding-64 w3-container">
+    <div class="content2">
+        <div class="w3-third">
+            <h1>ArcGIS Experience Builder</h1>
+            <h5 class="w3-padding-32">ArcGIS Experience Builder allows you to quickly turn your data into interesting web apps without needing to write code. You are able to build apps and display them on a fixed or scrolling screen, on single or multiple pages.</h5>
+            <h4>Pros</h4>
+            <p class="w3-text-grey">Experience Builder is a great all in one type of tool that allows creators to make an app that can feel like an entire web page. It's also different from most ArcGIS app building products where the app you can create doesn't need to include a map.</p>
+            <h4>Cons</h4>
+            <p class="w3-text-grey">The product is still very new and there isn't a lot of documentation to support development. The designing UX is not always clear and can be difficult to work with at times. The number of options for configuration can also feel overwhelming to new users.</p>
+        </div>
+        <!-- Picture goes here ---->
+        <div class="w3-twothird extrapadl">
+            <img src="images/ExpBuildUXResized.PNG" alt="ArcGIS Exp Builder UX">
+            <h4>Builder Development</h4>
+            <p class="w3-text-grey">Experience Builder has its own web page for creating products within ArcGIS Online, here you can start a new build from a large number of available templates. (Using a template would be recommended for new users)</p>
+            <p class="w3-text-grey">From here, you are able to drag and drop and re-arrange widgets however you see fit. The left column is where you find and organize widgets and the right column is where you can configure the settings for charts, stastics, and other types of widgets.</p>
+            <p class="w3-text-grey">Once all the settings are to preference, the product can then be published to the web.</p>
+            <a href="https://experience.arcgis.com/experience/c21795a55ad548828276ce98be974a70" target="_blank" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top">Go To Solution</a>
+        </div>
+    </div>
+</div>
+
+<!-- Arcade Grid ----------------------------------->
+<div id="arcade" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="content2">
+        <div class="w3-third w3-center">
+            <!-- Picture goes here -->
+            <i class="fa fa-gears w3-padding-64 w3-text-blue w3-margin-right"></i> 
+        </div>
+        <!-- Text starts here -->
+        <div class="w3-twothird">
+            <h1>Arcade Functionality</h1>
+            <h5 class="w3-padding-32">Arcade is a lightweight, portable expression language used to create custom content (like popups, etc.) in ArcGIS applications. It can manipulate text, perform mathematical calculations, and evaluate logical statements. Arcade expressions created in one application can be used in other applications. They can also be used in ArcGIS API for Javascript. Arcade has a rich library of functions to achieve practically any aim.</h5>
+            <h4>Pros</h4>
+            <p class="w3-text-grey">You can create dynamic displays for map/dashboard/application content can use same expression across multiple ArcGIS Applications.</p>
+            <h4>Cons</h4>
+            <p class="w3-text-grey">Only works in ArcGIS (Pro, Online, Applications, API for Javascript)</p>
+        </div>
+    </div>
+</div>
+
+<!-- VertiGIS Studio Grid ----------------------------------->
+<div id="vert" class="w3-row-padding w3-padding-64 w3-container">
+    <div class="content2">
+        <div class="w3-half extrapadr">
+            <h1>VertiGIS Studio Web</h1>
+            <h5 class="w3-padding-32">VertiGIS Studio Web provides a foundation for customizing browser-based interactive mapping applications. Built to co-operate with Esri's JavaScript API, Web allows developers to extend the functionality of ArcGIS services with a more robust platform.</h5>
+            <h4>Pros</h4>
+            <p class="w3-text-grey">We did find the default "Web GIS" template option visually appealing once our map was in place and the docked side panel gives plenty of real estate for providing context and written directions to use the tools.</p>
+            <h4>Cons</h4>
+            <p class="w3-text-grey">From prior encounters with VertiGIS/Geocortex web viewers as inexperienced users, we've found them tricky to operate as a first-timer. The tools are not the most intuitive to use and navigation between different pages of the docked pane takes some getting used to.</p>
+        </div>
+            <!-- Image goes here ---->
+            <div class="w3-half">
+            <img src="images/VertiGIS_Sample_Resized.png" alt="VertiGIS Example">
+            <h4>Development Findings</h4>
+            <p class="w3-text-grey">Since our targeted user is not likely to use this application frequently and may not be as spatially oriented as this development team, we concluded that the VertiGIS Studio Web platform is not optimal for our solution.</p>
+            <a href="https://luna.flemingcollege.ca/Geocortex/WebViewer/?app=73e3b0c6c4b74cd0972a5499ce0a2bfd" target="_blank" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top">Go To Solution</a>
+        </div>
+    </div>
+</div>
+
+<!-- CONCLUSION Grid ----------------------------------->
+<div id="conclusion" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="content2">
+        <div class="w3-third extrapadr">
+            <!-- Picture goes here -->
+            <i class="fa fa-lightbulb-o w3-padding-64 w3-text-blue w3-margin-right"></i> 
+        </div>
+            <!-- Text starts here -->
+            <div class="w3-twothird">
+            <h1>Conclusion</h1>
+            <h5 class="w3-padding-32">Throughout this process our team has experimented with a variety of web tools, each of them possessing great capabilities to push web GIS to the next level. However we ultimately chose ArcGIS Dashboards as the ideal solution for our problem.</h5>
+            <p class="w3-text-grey">We chose the end product based on a number of reasons such as time taken to develop, number of available widgets and function options, and ease of use for the end user. We found that ArcGIS Dashboards was the most straightforward without compromising too much on functionality.</p>
+            <a href="https://fleming.maps.arcgis.com/apps/dashboards/079c89835737462c9fdb4b014b124e87" target="_blank" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top">Go To Final Solution</a>         
+            <h4>If we had more time... some wishlist items</h4>
+            <p class="w3-text-grey">- Implementing interactivity to allow selections in map to influence data in other sections</p>
+            <p class="w3-text-grey">- Using an Arcade expression to change/update a section of the dashboard based on map selection.</p>
+            <p class="w3-text-grey">- Have the map zoom in to selected feature based on clicks in other sections.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Disclaimer grid -->
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-16">
+    <h1 class="w3-margin w3-xlarge">This project was completed as part of academic learning for the Fleming College - Web GIS Development course</h1>
+</div>
+
+<!-- Footer starts here ---------------------------------------->
+<footer class="w3-container w3-padding-32 w3-center w3-opacity">
+    <div>
+        <img src="images/FlemingSENRS_noBackground.png" alt="Fleming SENRS Logo">
+    </div>
+    <a href=#header class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Back to Top</a>
+    <p>Layout originally designed by: <a href="https://www.w3schools.com/css/css_rwd_templates.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<!-- Javascript here -->
+<script>
+</script>
+
+</body>
+</html>
