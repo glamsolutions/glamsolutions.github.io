@@ -8,12 +8,12 @@ ul {
     background-color: #1F2833;
     }
 
-.list1 { 
+ol.list1 { 
     color: black;
     }
 
 
-.list2 { 
+li.list2 { 
     color: black;
     }
 
