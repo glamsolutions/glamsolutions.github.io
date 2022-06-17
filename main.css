@@ -8,15 +8,6 @@ ul {
     background-color: #1F2833;
     }
 
-ol.list1 { 
-    text-color: black;
-    }
-
-
-li.list2 { 
-    text-color: black;
-    }
-
 .navbar {
     text-align: center;
     display:flex;
