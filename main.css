@@ -27,11 +27,6 @@ li {
     /*float: left;*/
 } 
 
-li.xx {
-    color: black;
-    background-color:none;
-} 
-
 li a, .dropbtn {
     display: inline-block;
     color: white;
