@@ -28,7 +28,8 @@ li {
 } 
 
 li.xx {
-    text-color: black;
+    color: black;
+    background-color:none;
 } 
 
 li a, .dropbtn {
