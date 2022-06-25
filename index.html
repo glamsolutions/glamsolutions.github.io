@@ -27,11 +27,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Verdana, sans-serif; margin-top: 16px}
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">Project Process</a>
                     <div class="dropdown-content">
+                        <a href=#data>Data Pre-Processing</a>
                         <a href=#pro>ArcGIS Pro/Desktop Tools</a>
                         <a href=#story>ArcGIS StoryMaps</a>
                         <a href=#vert>Geocortex 5 Web</a>
                         <a href=#dash>ArcGIS Dashboards</a>
-                        <a href=#arcade>Arcade Language</a>
                     </div>
             <li><a href=#conclusion>Conclusion</a></li>
         </ul>
@@ -85,6 +85,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Verdana, sans-serif; margin-top: 16px}
     <h1>Project Process</h1> 
 </div>
 
+<!-- StoryMaps Grid ----------------------------------->
+<div  id="data" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="content2">
+        <div class="w3-third extrapadr">
+            <h1>Data Pre-Processing</h1>
+            <h5 class="w3-padding-16">The data required some manipulation to be ready for the spatial analysis process.</h5>
+            <p class="w3-text-grey">This included clipping the outliers of the assets located outside of York Region to prevent erroneous results. The multiple flood-related data layers that were provided initially were consolidated into a single floodplain and any asset layers missing a corresponding road segment identifier had to be matched with one to facilitate the calculation of criticality.</p>
+            <h4>Data Assumptions</h4>
+            <p class="w3-text-grey">It is assumed that these asset layers all contain a field called “SEGMENTID” which identifies what regional road they are nearest to. Finally, the user only wishes to compare an asset layer against a single floodplain layer.</p>
+            <h4>Transportation Assets</h4>
+            <p class="w3-text-grey">Some of the asset data received from the client already had a segment ID but any that did not was run through a one-to-one Spatial Join with the asset as the target feature, the regional road data as the join feature, the Closest match option, and the only output field inherited from the road layer as SEGMENTID. For the two asset layers that contained features positioned well away from regional roads (trnBusStop and trnYRTHub), a search radius of 100 metres was included when running the spatial join to prevent criticality from being falsely inflated by assets that do not actually exist near the road segment. </p>
+        </div>
+        <!-- Picture goes here ---->
+        <div class="w3-twothird">
+            <img src="images/FloodplainMapFull.jpg" alt="Data Before and After">
+            <h4>Floodplains</h4>
+            <p class="w3-text-grey">Three of the flood-related layers acquired from the client were filtered and combined to create a single floodplain that represented the inundated area in the worst-case flooding scenario for the whole region. Since two different conservation authorities assembled the flood data, there were some notable differences in the datasets that required them to be initially processed separately.</p>
+            <p class="w3-text-grey">The data from TRCA delineated worst-case scenario flood polylines. To produce a TRCA floodplain, edits were made to the data to close any open polylines under the assumption that a straight-line connection between endpoints was acceptable. The “must not have dangles” topological rule was implemented to catch any residual open polylines. Then, the flood lines layer was run through the Feature to Polygon tool to produce a floodplain. The flood data from LSRCA was split between two different layers, The two layers were filtered then merged and, as with the TRCA data, a field was added and populated to store the name of the source conservation authority.   </p>
+        </div>
+    </div>
+</div>
+
 <!-- ArcGIS Pro Grid ----------------------------------->
 <div  id="pro" class="w3-row-padding w3-padding-64 w3-container">
     <div class="content2">
@@ -98,7 +120,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Verdana, sans-serif; margin-top: 16px}
         </div>
         <!-- Picture goes here ---->
         <div class="w3-twothird">
-            <img src="images/ArcGISProWindow.PNG" alt="ArcGIS Pro Window showing Find Flood Vulnerable Assets Tool model.">
+            <img src="images/Model.PNG" alt="ArcGIS Pro Window showing Find Flood Vulnerable Assets Tool model.">
             <h4>Find Flood Vulnerable Assets Tool Development</h4>
             <p class="w3-text-grey">This tool was developed over several iterations. The final version will take several asset layers, and one floodplain layer. It then adds a field for the AtRisk value if it does not already exist in the data. Then, it determines if the asset lies within the floodplain, and applies a value to the AtRisk field, 0 for Not At Risk, and 1 if it is at risk of flooding.</p>
             <h4>Criticality Ranking Tool Development</h4>
@@ -168,27 +190,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Verdana, sans-serif; margin-top: 16px}
     </div>
 </div>
 
-<!-- Arcade Grid ----------------------------------->
-<div id="arcade" class="w3-row-padding w3-padding-64 w3-container">
-    <div class="content2">
-        <div class="w3-third w3-center">
-            <!-- Picture goes here -->
-            <i class="fa fa-gears w3-padding-64 w3-text-blue w3-margin-right"></i> 
-        </div>
-        <!-- Text starts here -->
-        <div class="w3-twothird">
-            <h1>Arcade Language</h1>
-            <h4 class="w3-padding-16">Arcade is a lightweight, portable expression language used to create custom content (like popups, etc.) in ArcGIS applications. </h4>
-            <h4>What it can do</h4>
-            <p class="w3-text-grey">It can manipulate text, perform mathematical calculations, and evaluate logical statements. Arcade expressions created in one application can be used in other applications. ArcGIS Arcade was used in this project in order to create customized widgets within the dashboard.</p>
-            <img src="images/ArcadeInDash.png" alt="Arcade use in ArcGIS Dashboard">
-            <a href="https://developers.arcgis.com/arcade/" target="_blank" class="w3-button w3-blue w3-padding-large w3-large w3-margin-top">Get Started with Arcade</a>
-        </div>
-    </div>
-    </div>
-
 <!-- CONCLUSION Grid ------------------------------------------------------------------>
-<div id="conclusion" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div id="conclusion" class="w3-row-padding w3-padding-64 w3-container">
     <div class="content2">
         <div class="w3-third extrapadr">
             <!-- Picture goes here -->
