@@ -68,12 +68,13 @@ li.dropdown {
 /* Styling header image reference here!! */
 /* image retrieved from: https://www.northernontario.travel/boating/5-ontario-pwc-destinations-worth-trailering-to */
 .headerpic {
-    background-image: url("images/water.jpg");
+    background-image: url("images/water_header2.jpg");
     background-color: #cccccc;
 }
 
 .headerwords {
     background-color: rgba(255, 255, 255, 0.5);
+    padding-top: 20px;
     border-radius: 25px
 }
 
